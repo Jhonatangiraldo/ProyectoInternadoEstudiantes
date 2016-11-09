@@ -1,0 +1,55 @@
+<html lang="es">
+	<head>
+	    <meta charset="utf-8">
+	    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+	</head>
+	 
+	<body>     
+		<div class="row">
+
+      <div class="col s12">
+        <div class="card-stacked">
+                <div class="card-content">
+                  <div class="container">
+                        <h4 class="header left-align grey-text">Mi usuario</h4>
+                             
+                            
+                            <div class="row">
+                            <div class="col s6">
+                                <span class="grey-text">Usuario: </span>
+                                <input type="text" name="userName"  [(ngModel)]="usuario"> 
+                              </div>
+                               <div class="col s6">
+                                  <select class="browser-default" [(ngModel)]="rol">
+                                    <option value="" disabled selected>Seleccionar ROL</option>
+                                    <option value="1">Estudiante</option>
+                                    <option value="2">Administrador</option>
+                                  </select>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+								            <div class="col s6">
+                            		<span class="grey-text" >Contraseña </span>
+                            		<input type="password" name="password" [(ngModel)]="password">
+                            	</div>
+                            	<div class="col s6">
+                            		<span class="grey-text" >*Confirma tu contraseña </span>
+                            		<input type="password" name="password2" [(ngModel)]="password2">
+                           		</div>
+                            </div>
+
+                        <div class="card-action right-align">
+                            <a class="waves-effect waves-light btn teal darken-1" (click)="guardar()"><i class="material-icons left">assignment_ind</i>Registrarse</a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+      </div>
+    </div>
+	</body>
+
+</html>

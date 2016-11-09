@@ -1,0 +1,91 @@
+  <html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="../../css/materialize.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script> 
+    </head>
+     
+    <body>     
+        <div class="row">
+
+      <div class="col s12">
+        <div class="card-stacked">
+                <div class="card-content">
+                  <div class="container">
+                    <h4 class="header left-align grey-text">Petición</h4>
+                            
+                        <div class="row">
+                            <div class="input-field col s12">
+                              <input id="name" type="text" class="validate"  [(ngModel)]="nombre" placeholder="Nombre Completo">
+                            </div>
+                        </div>
+                        
+                        <div class="container">
+                        <div class="row">
+                            <div class="col s4">
+                                <div class="row">          
+                                   <label><i class="tiny material-icons prefix">today</i> Fecha de Salida</label>              
+                                   <input type="date" class="datepicker" id="fechaSalida"  [(ngModel)]="fechaSalida">    
+                                </div>            
+                            </div>
+
+                            <div class="col s1">         
+                            </div>
+
+                            <div class="col s2">
+                                <div class="row">               
+                                   <label><i class="tiny material-icons prefix">av_timer</i> Hora de Salida</label>              
+                                   <input type="time" class="timepicker" id="horaSalida"  [(ngModel)]="horaSalida">    
+                                </div>            
+                            </div>
+
+                            <div class="col s1">         
+                            </div>
+
+                            <div class="col s2">
+                                <div class="row">               
+                                   <label><i class="tiny material-icons prefix">av_timer</i> Hora de Llegada</label>              
+                                   <input type="time" class="timepicker" id="horaLlegada"  [(ngModel)]="horaLlegada">    
+                                </div>            
+                            </div>                                         
+                        </div>
+                        </div>
+                        
+                        <div class="container">
+                            <blockquote class="grey-text">
+                             Su motivo será indispensable para aceptar su petición de salida.
+                            </blockquote>
+
+                            <div class="row">
+                                <div class="col s12">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                          <i class="material-icons prefix">textsms</i>
+                                          <input type="text" placeholder="Motivo de Salida" id="motivo-input" class="autocomplete"  [(ngModel)]="motivo">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                           
+                            <div class="card-stacked">
+                <div class="card-content">
+                  <div class="container">
+                        <div class="card-action right-align">
+                            <a class="waves-effect waves-light btn teal darken-1" (click)="pedir()"><i class="small material-icons left">spellcheck</i>Enviar</a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+                    </div>
+                </div>
+              </div>
+      </div>
+    </div>
+    </body>
+
+</html>

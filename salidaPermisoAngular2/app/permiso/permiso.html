@@ -1,0 +1,78 @@
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script> 
+    </head>
+     
+    <body> 
+      <div class="container">
+      <h4 class="header left-align grey-text">Permiso</h4>
+
+      <div class="container">
+         <div class="card horizontal grey lighten-4">
+        <div class="row">
+      <div class="col s12">
+        <div class="card-stacked">
+                <div class="card-content">
+                  <div class="container">
+                        <div class="row">
+                            <div class="input-field col s12">
+                            Nombre: {{nombre}}
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col s4">
+                                <div class="row">          
+                                  Fecha: {{fecha}}
+                                </div>            
+                            </div>
+
+                            <div class="col s1">         
+                            </div>
+
+                            <div class="col s2">
+                                <div class="row">               
+                                   Hora Salida: {{horaSalida}}
+                                </div>            
+                            </div>
+
+                            <div class="col s1">         
+                            </div>
+
+                            <div class="col s2">
+                                <div class="row">               
+                                   Hora llegada: {{horaLlegada}}
+                                </div>            
+                            </div>                                         
+                        </div>
+                        
+                        <div class="container">
+                            <blockquote class="grey-text">
+                              {{motivo}}
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+              </div>
+      </div>
+    </div>
+</div>
+</div>
+
+<div class="card-content">
+                  <div class="container" *ngIf="estado == 0">
+                        <div class="card-action right-align">
+                          <a class="waves-effect waves-light btn teal darken-1" (click)="aprobar()"><i class="small material-icons left">receipt</i>Aprobar</a>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="estado == 1">
+                Esta peticion ya ha sido aprobada
+                </div>
+</div>
+    </body>
+</html>

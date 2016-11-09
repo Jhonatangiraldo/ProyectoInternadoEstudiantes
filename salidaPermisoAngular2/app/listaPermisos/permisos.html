@@ -1,0 +1,42 @@
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script> 
+      
+    </head>
+
+     
+    <body> 
+      <div class="container">
+      <h4 class="header left-align grey-text">Permisos</h4>
+          <ul>
+              <li>
+                <div class="accordion"><i class="material-icons">receipt</i>Pendientes</div>
+                <div class="accordion">
+                  <div class="collection">
+                  <!--<a  routerLink="/permiso" routerLinkActive="active" class="collection-item">Joan Esneyder Gil Devia</a>-->
+                  <a class="collection-item" [routerLink]="['/permiso', datoNo.id]" *ngFor="let datoNo of datosNo">{{datoNo.nombrePersona}}</a>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="accordion"><i class="material-icons">assignment</i>Aceptados</div>
+                <div class="accordion">
+                  <div class="collection">
+                  <a class="collection-item" *ngFor="let datoSi of datosSi" [routerLink]="['/permiso', datoSi.id]" >{{datoSi.nombrePersona}}</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="card-action right-align">
+                            <a routerLink="/registro" routerLinkActive="active" class="waves-effect waves-light btn teal darken-1" href="Registro.html"><i class="material-icons left">assignment_ind</i>Nueva Cuenta</a>
+                        </div>
+      </div>
+    </body>
+</html>
